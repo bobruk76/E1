@@ -13,6 +13,10 @@ def main():
             points += 1
 
         print('{} Штрафных очков:{}'.format(result_word, points))
+    if points < 4:
+        print('Вы выиграли!')
+    else:
+        print('Вы проиграли!')
 
 if __name__ == '__main__':
     main()
