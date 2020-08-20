@@ -1,5 +1,10 @@
 # E1
 # Игра в виселицу
+[![Travis][build-badge]][build]
+
+[build-badge]: https://img.shields.io/travis/bobruk76/E1/master.png?style=flat-square
+
+[build]: https://travis-ci.org/bobruk76/E1
 * склонировать этот репозиторий;
 * перейти в папку с ним; 
 * создать виртуальное окружение `python -m venv venv`;
