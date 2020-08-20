@@ -1,15 +1,10 @@
 import pytest
 
-import service
+@pytest.fixture(params = ['skillfactory', 'testing', 'blackbox', 'pytest', 'unittest', 'coverage'])
+def word(request):
+    return request.param
 
-TASK_ID = 1
-TASK_TEXT = "text text"
-TASKS = {TASK_ID: TASK_TEXT}
-
-@pytest.fixture()
-def tasks():
-    service.TASKS = TASKS
-
-@pytest.fixture()
-def tasks_empty():
-    service.TASKS = TASKS
+@pytest.fixture(params = ['l', 'a', 'y', 'i', 'p', 'g', 'x', 'v', 'b', 'e', 't', 'o', 'r', 'c', 'f', 'k', 's', 'n', 'u']
+)
+def true_letter(request):
+    return request.param

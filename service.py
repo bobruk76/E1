@@ -10,7 +10,7 @@ def set_result_word(string):
 def letter_in_string(letter, string, res_string=''):
     res = list(set_result_word(string) if len(res_string) == 0 else res_string)
     for i, l in enumerate(string):
-        if l == letter:
+        if l == letter.lower():
             res[i] = l
     return ''.join(res)
 
