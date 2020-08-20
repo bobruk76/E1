@@ -4,9 +4,13 @@ def get_word():
     word_list = ['skillfactory', 'testing', 'blackbox', 'pytest', 'unittest', 'coverage']
     return random.choice(word_list)
 
-def letter_in_string(letter, string, res_string):
-    res = ''
+def set_result_word(string):
+    return '_' * len(string)
+
+def letter_in_string(letter, string, res_string=''):
+    res = list(set_result_word(string) if len(res_string) == 0 else res_string)
     for i, l in enumerate(string):
-        res += string[i] if string[i] == letter else res_string[i]
-    return res
+        if l == letter:
+            res[i] = l
+    return ''.join(res)
 

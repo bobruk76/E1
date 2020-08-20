@@ -1,15 +1,11 @@
 import datetime
 from mock import MagicMock
-
-from app import get_parameters_for_task_creation, format_date
-
 import pytest
 
-import service
+from service import get_word, letter_in_string
 
-TASK_ID = 1
-TASK_TEXT = "text text"
-TASKS = {TASK_ID: TASK_TEXT}
+
+
 
 def test_get_task_id_exists(tasks):
     result_task = service.get_task(TASK_ID)
