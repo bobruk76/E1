@@ -8,3 +8,8 @@ def word(request):
 )
 def true_letter(request):
     return request.param
+
+@pytest.fixture(params = list('abcdefghijklmnopqrstuvwxyz'))
+def all_letter(request):
+    return request.param
+
